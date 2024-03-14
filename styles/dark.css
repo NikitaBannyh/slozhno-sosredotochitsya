@@ -4,14 +4,12 @@
   переключая тему
 */
 
-:root.theme_dark {
+.page.theme_dark {
   --bg-color: #000028;
-  --accent-color: #ff0070;
+  --accent-color: #ff006f;
+  --color-hover: rgb(255 0 112 / 0.4);
   --text-color: #f1b2ce;
   --title-color: #db00ff;
-}
-
-.page.theme_dark {
   color: var(--text-color);
   background-color: var(--bg-color);
   background-image: url("../images/cover-image-dark.png");

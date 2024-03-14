@@ -3,17 +3,12 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-light {
-  --bg-color-light-theme: #fff1f7;
-  --accent-color-light-theme: #ff8dcb;
-  --text-color-light-theme: #353430;
-  --title-color-light-theme: #ffc2e6;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color-light-theme: #fff1f7;
     --accent-color-light-theme: #ff8dcb;
+    --color-light-theme-hover: rgb(50 49 45 / 0.4);
     --text-color-light-theme: #353430;
     --title-color-light-theme: #ffc2e6;
   }
@@ -24,11 +19,11 @@
     background-image: url("../images/cover-image-light.png");
   }
 
-  .page.theme_auto .header__rec-text {
+  .page.theme_auto .rec-text {
     display: none;
   }
 
-  .page.theme_auto .header__rec {
+  .page.theme_auto .rec {
     border-color: var(--text-color-light-theme);
   }
 
@@ -37,7 +32,7 @@
   }
 
   .page.theme_auto .header__theme-menu-button:hover {
-    border: 1px solid var(--text-color-light-theme);
+    border: 1px solid var(--color-light-theme-hover);
   }
 
   .page.theme_auto .header__theme-menu-button:focus-visible {
@@ -74,16 +69,21 @@
 }
 
 .page.theme_light {
+  --bg-color-light-theme: #fff1f7;
+  --accent-color-light-theme: #ff8dcb;
+  --color-light-theme-hover: rgb(50 49 45 / 0.4);
+  --text-color-light-theme: #353430;
+  --title-color-light-theme: #ffc2e6;
   color: var(--text-color-light-theme);
   background-color: var(--bg-color-light-theme);
   background-image: url("../images/cover-image-light.png");
 }
 
-.page.theme_light .header__rec-text {
+.page.theme_light .rec-text {
   display: none;
 }
 
-.page.theme_light .header__rec {
+.page.theme_light .rec {
   border-color: var(--text-color-light-theme);
 }
 
@@ -92,7 +92,7 @@
 }
 
 .page.theme_light .header__theme-menu-button:hover {
-  border: 1px solid var(--text-color-light-theme);
+  border: 1px solid var(--color-light-theme-hover);
 }
 
 .page.theme_light .header__theme-menu-button:focus-visible {
@@ -120,6 +120,20 @@
 .page.theme_light .section__card-title {
   color: inherit;
   background-color: var(--accent-color-light-theme);
+}
+
+.page.theme_light .section__link {
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color-light-theme);
+}
+
+.page.theme_light .section__link:hover {
+  border-bottom: 1px solid var(--text-color-light-theme);
+}
+
+.page.theme_light .section__link:focus-visible {
+  outline: 1px solid var(--text-color-light-theme);
 }
 
 .page.theme_light .footer__title {
